@@ -18,7 +18,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -165,12 +166,157 @@ label span {
   font-size: 13px;
 }
 
-input {
+input,
+select {
   width: 100%;
   min-height: 42px;
   border-radius: 7px;
   border: 1px solid var(--border);
   padding: 0 12px;
+  background: #ffffff;
+}
+
+input[readonly] {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.tab {
+  padding: 0 16px;
+  border-radius: 999px;
+}
+
+.tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+.tab.ghost {
+  margin-left: auto;
+  color: #64748b;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  color: #64748b;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  background: #f8fafc;
+}
+
+tr.row-bad td {
+  background: #fef2f2;
+}
+
+.num-bad {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge.ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.bad {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge.spare {
+  background: #e0f2fe;
+  color: #075985;
+}
+
+.badge.neutral {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.badge.muted {
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--accent) 14%, #ffffff);
+  color: #0369a1;
+  font-size: 12px;
+}
+
+.hint {
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.actions button {
+  padding: 0 14px;
+}
+
+.field-grid.one {
+  grid-template-columns: 1fr;
+}
+
+.pending-list {
+  margin: 0;
+  padding-left: 20px;
+  color: #92400e;
+  line-height: 1.9;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .records {
